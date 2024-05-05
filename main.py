@@ -8,11 +8,11 @@ import os
 nltk.download('stopwords', quiet=True)
 nltk.download('punkt', quiet=True)
 
-def analyze_text(file):
+def analyze_text(filename):
     """
     Reads the text file, filters out stopwords, and returns how many times each words was repeated
     """
-    with open(file, 'r') as file:
+    with open(filename, 'r') as file:
         text = file.read().lower()
 
     stop_words = stopwords.words('english')
